@@ -1,0 +1,21 @@
+Directory Structure :
+
+www = root of google app engine repository. all path are relative to "www", not to the git root.
+s = s for "static"
+t = t for "theme"
+
+Main :
+-www : appspot stuff live here
+--www/s : statics files
+---www/s/js : Javascript NOT theme specific
+---www/s/img : images NOT theme specific
+---www/s/css : css NOT theme specific (does it make sense ?)
+---www/s/t : theme based statics files
+
+Theme structure (default theme, replace "default" by the theme name. eg : "iphone" ) :
+----www/s/t/default : default theme
+-----www/s/t/default/css : css for default theme
+-----www/s/t/default/img : image repository for default theme
+-----www/s/t/default/js : js repository for default theme
+
+
