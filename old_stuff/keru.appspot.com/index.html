@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="css/tribune.css" />
+    <title>Les tribunations de keru sur google app</title>
+
+    <script type="text/javascript">
+	function clickclear(thisfield) {
+	thisfield.value = "";
+	}
+    </script>
+    
+  </head>
+
+  <body>
+  	<div class="frontend">
+	<div class="empty_sep"> </div>
+	<div class="tribune">
+	<b>Les tribunations de <a href="http://www.keru.org/">keru</a> sur Google App</b> 
+
+	<form method="POST" action="/post">
+		<table width="100%" border=0><tr>
+			<td class="menubar" align="left" valign="top">
+				<input class="formulaire_tribune" type="text" maxlength=15 name="nick" value="plop" size=9 onclick='clickclear(this)'>
+
+			</td>
+			<td class="menubar" align="left" valign="top">
+				<input class="formulaire_tribune" type="text" maxlength=255 name="content" size=128>
+			</td>
+			<td class="menubar" align="right" valign="top">
+				<input class="formulaire_tribune" type="submit" value="Post!" class="formulaire_tribune">
+			</td>
+		</tr></table>
+	</form>
+
+	<div class="empty_line"> </div>
+	{% for tribuneEntry in tribuneList %}
+		<div class="clock_tribune">[<b>{{ tribuneEntry.date|date:"H:i:s" }}</b>] &nbsp  <b>{{ tribuneEntry.nickname|escape }} : </b> </div>
+		<div class="post_tribune">{{ tribuneEntry.content|escape }}</div>
+	{% endfor %}
+
+<div class="underhill"> </div>
+</div>
+</div>
+</body>
+</html>
+

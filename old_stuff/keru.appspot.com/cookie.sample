@@ -1,0 +1,44 @@
+setting :
+
+import Cookie
+import re
+import base64
+
+class YourHandler(webapp.RequestHandler):
+   cookieName = 'MyCookie'
+   domain = ''
+   expires = 360
+   value = 'Some value or something...'
+
+   def get(self):
+         simpleCookieObj = Cookie.SimpleCookie()
+
+         simpleCookieObj[self.cookieName] = str(base64.b64encode(self.value))
+         simpleCookieObj[self.cookieName]['expires'] = self.expires
+         simpleCookieObj[self.cookieName]['path'] = '/'
+         simpleCookieObj[self.cookieName]['domain'] = self.domain
+         simpleCookieObj[self.cookieName]['secure'] = ''
+
+         #Cookie.SimpleCookie's output doesn't seem to be compatible with WebApps's http header functions
+         #and this is a dirty fix
+
+         headerStr = simpleCookieObj.output()
+         regExObj = re.compile('^Set-Cookie: ')
+         self.response.headers.add_header('Set-Cookie', str(regExObj.sub('', headerStr, count=1)))
+
+
+getting :
+
+import Cookie
+import base64
+
+class YourOtherHandler(webapp.RequestHandler):
+   cookieName = 'MyCookie'
+
+   def get(self):
+      try:
+         cookieValue = str(base64.b64decode(self.request.cookies[self.cookieName]))
+      except KeyError:
+         #There wasn't a Cookie called that
+         cookieValue = ''
+

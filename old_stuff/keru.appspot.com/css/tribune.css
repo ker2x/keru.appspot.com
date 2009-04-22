@@ -1,0 +1,154 @@
+body {
+	color: black;
+	margin: 10px;
+	background-color: #e9e9e9;
+}
+
+h1,h2,h3,h4,h5 {
+   	font-family: "Verdana", "Geneva", "sans-serif";
+   	background-color: #9eb6ce; 
+	text-align: left;
+	/* border: 1px solid #cccccc; */
+}
+
+.frontend {
+	width:810px;
+	background-color: white;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px black solid;
+	overflow: hidden;
+}
+
+.empty_sep {
+	height:10px;
+}
+
+.empty_line {
+	height:1px;
+}
+
+.header_page {
+	/* height:140px; */
+}
+
+.img_header {
+	border-width: 2px;
+	border-color: black;
+	border-style: solid;
+	width:  800px;
+	height: 120px;
+}
+
+.menubar {
+	color: black;
+	font-size: 12px;
+	font-family: "Verdana", "Arial", "sans-serif";
+}
+
+.texte {
+	color: black;
+	text-align: justify;
+	font-size: 14px;
+	font-family: "Verdana", "Arial", "sans-serif";
+}
+
+.title {
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+	
+.userblock {
+	min-height:600px;
+	color: black;
+}
+
+.underhill {
+	color: black;
+	font-size: 10px;
+	font-family: "Arial", "sans-serif";
+	height:10px;
+}
+
+td.menubar a:link {
+color: blue;
+text-decoration: none;
+}
+
+td.menubar a:visited {
+color: blue;
+text-decoration: none;
+}
+
+td.menubar a:active {
+color: blue;
+text-decoration: underline;
+}
+
+td.menubar a:hover {
+text-decoration: underline;
+}
+
+/* integration de la tribune */
+div.tribune {
+font-size: 12px;
+font-family: Verdana, Arial, Helvetica, sans-serif, monospace;
+}
+
+.formulaire_tribune {
+border: solid 1px black;
+font-size: 12px;
+background-color:#e9e9e9; 
+color: #000000;
+vertical-align:middle;
+width:100%;
+}
+
+div.clock_tribune {
+float: left;
+margin-top: 1px;
+}
+
+div.post_tribune {
+margin-left: 100px;
+margin-top: 1px;
+padding-left: 15px;
+}
+
+/* integration de la tribune */
+div.tribune {
+font-size: 12px;
+font-family: Verdana, Arial, Helvetica, sans-serif, monospace;
+}
+
+.formulaire_tribune {
+border: solid 1px black;
+font-size: 12px;
+background-color:#e9e9e9; 
+color: #000000;
+vertical-align:middle;
+width:100%;
+}
+
+div.clock_tribune {
+float: left;
+margin-top: 0px;
+}
+
+div.clock_tribune a{
+text-decoration: none;
+color: black;
+}
+
+div.post_tribune {
+margin-left: 50px;
+margin-top: 1px;
+padding-left: 50px;
+color: black;
+}
+
+

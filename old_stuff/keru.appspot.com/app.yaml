@@ -1,0 +1,16 @@
+application: keru
+version: 3
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /img
+  static_dir: img
+
+- url: /.*
+  script: tribune.py
+
+  
